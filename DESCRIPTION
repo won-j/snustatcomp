@@ -1,0 +1,16 @@
+Package: snustatcomp
+Title: Explicit Data Structures for Statistical Computing Lessons
+Version: 0.1.0
+Authors@R: person(given = "Joong-Ho (Johann)", family = "Won", email = "wonj@stats.snu.ac.kr", role = c("aut", "cre"))
+Description: Small, explicit implementations of mutable pairs, linked lists,
+    association tables, tagged data, generic operations, symbolic expressions,
+    and elementary numerical algorithms for teaching statistical computing.
+    The same maintained R sources generate readable code for lecture examples.
+License: GPL-3
+Encoding: UTF-8
+Depends: R (>= 4.1.0)
+Imports: utils
+Suggests: testthat (>= 3.0.0), knitr
+Config/testthat/edition: 3
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
