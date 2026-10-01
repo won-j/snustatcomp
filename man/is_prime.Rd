@@ -7,15 +7,15 @@
 is_prime(n)
 }
 \arguments{
-\item{n}{A finite integer-valued numeric scalar.}
+\item{n}{A numeric scalar used as an integer.}
 }
 \value{
 One logical value.
 }
 \description{
-Integers less than two are not prime. Invalid inputs, including missing,
-infinite, noninteger, and nonscalar values, produce an error. This is a
-recursive teaching algorithm for small integers.
+Integers less than two are not prime. This is a recursive teaching algorithm
+for small integers and assumes \code{n} is one numeric scalar used as an integer.
+It does not perform separate input validation.
 }
 \examples{
 is_prime(43)

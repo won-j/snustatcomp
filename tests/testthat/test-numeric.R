@@ -9,21 +9,6 @@ test_that("gcd normalizes signs and handles zero", {
   expect_equal(gcd(0, 0), 0)
   expect_equal(gcd(17, 13), 1)
 })
-test_that("integer algorithms reject invalid scalar inputs", {
-  invalid <- list(NA_real_, NaN, Inf, -Inf, 2.5, numeric(), c(2, 3), "2", TRUE)
-  for (x in invalid) {
-    expect_error(gcd(x, 2))
-    expect_error(gcd(2, x))
-    expect_error(is_prime(x))
-    expect_error(smallest_divisor(x))
-    expect_error(find_divisor(17, x))
-    expect_error(divides(x, 6))
-  }
-  expect_error(divides(0, 6))
-  expect_error(smallest_divisor(1))
-  expect_error(find_divisor(17, 1))
-  expect_error(find_divisor(1, 2))
-})
 test_that("prime tests cover the boundary and composite squares", {
   expect_identical(vapply(c(-5, 0, 1), is_prime, logical(1)), c(FALSE, FALSE, FALSE))
   expect_identical(vapply(c(2, 3, 17, 43), is_prime, logical(1)), rep(TRUE, 4))

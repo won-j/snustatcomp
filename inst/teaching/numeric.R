@@ -4,10 +4,6 @@ square <- function(x) { x * x }
 
 ## ---- numeric-gcd
 gcd <- function(a, b) {
-  if (!is.numeric(a) || length(a) != 1L || !is.finite(a) || a != trunc(a) ||
-      !is.numeric(b) || length(b) != 1L || !is.finite(b) || b != trunc(b)) {
-    stop("a and b must be finite integer-valued numeric scalars")
-  }
   a <- abs(a)
   b <- abs(b)
   if (b == 0) {
@@ -20,21 +16,10 @@ gcd <- function(a, b) {
 
 ## ---- numeric-prime-helpers
 divides <- function(a, b) {
-  if (!is.numeric(a) || length(a) != 1L || !is.finite(a) ||
-      a != trunc(a) || a == 0 || !is.numeric(b) || length(b) != 1L ||
-      !is.finite(b) || b != trunc(b)) {
-    stop("a and b must be finite integer-valued numeric scalars; a must be nonzero")
-  }
   b %% a == 0
 }
 
 find_divisor <- function(n, test_divisor) {
-  if (!is.numeric(n) || length(n) != 1L || !is.finite(n) ||
-      n != trunc(n) || n < 2 || !is.numeric(test_divisor) ||
-      length(test_divisor) != 1L || !is.finite(test_divisor) ||
-      test_divisor != trunc(test_divisor) || test_divisor < 2) {
-    stop("n and test_divisor must be finite integer-valued numeric scalars >= 2")
-  }
   if (square(test_divisor) > n) {
     n
   } else if (divides(test_divisor, n)) {
@@ -48,8 +33,5 @@ smallest_divisor <- function(n) { find_divisor(n, 2) }
 
 ## ---- numeric-is-prime
 is_prime <- function(n) {
-  if (!is.numeric(n) || length(n) != 1L || !is.finite(n) || n != trunc(n)) {
-    stop("n must be a finite integer-valued numeric scalar")
-  }
   n >= 2 && n == smallest_divisor(n)
 }

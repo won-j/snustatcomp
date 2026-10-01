@@ -1,3 +1,9 @@
+# snustatcomp 0.1.1
+
+- Remove explicit input-validation branches from the numerical teaching
+  algorithms so their displayed code stays close to the lecture originals.
+  The corrected gcd sign handling and primality boundary remain unchanged.
+
 # snustatcomp 0.1.0
 
 - Package the lecture's mutable pair, list, table, tagged-data, complex, and

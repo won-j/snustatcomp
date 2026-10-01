@@ -14,13 +14,13 @@ find_divisor(n, test_divisor)
 smallest_divisor(n)
 }
 \arguments{
-\item{a}{A nonzero finite integer-valued numeric scalar.}
+\item{a}{A nonzero numeric scalar used as an integer.}
 
-\item{b}{A finite integer-valued numeric scalar.}
+\item{b}{A numeric scalar used as an integer.}
 
-\item{n}{A finite integer-valued numeric scalar at least two.}
+\item{n}{A numeric scalar representing an integer at least two.}
 
-\item{test_divisor}{A finite integer-valued numeric scalar at least two.}
+\item{test_divisor}{A numeric scalar representing an integer at least two.}
 }
 \value{
 \code{divides()} returns one logical value. \code{find_divisor()} and
@@ -32,6 +32,8 @@ for small teaching examples. \code{find_divisor()} starts at \code{test_divisor}
 when using a starting value above two, the caller is responsible for having
 ruled out smaller divisors. A recursive scan may exhaust R's recursion limit
 for large inputs.
+These helpers assume their arguments satisfy the stated teaching
+preconditions; they do not perform separate input validation.
 }
 \examples{
 divides(3, 12)
