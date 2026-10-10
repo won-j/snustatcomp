@@ -88,7 +88,7 @@ Rscript --vanilla -e 'roxygen2::roxygenise(".")'
 Rscript --vanilla tools/generate-teaching.R --check
 Rscript --vanilla -e 'testthat::test_local(".")'
 R CMD build .
-R CMD check --no-manual snustatcomp_0.1.0.tar.gz
+R CMD check --no-manual snustatcomp_0.1.2.tar.gz
 ```
 
 Commit generated files under `inst/teaching/` together with generated

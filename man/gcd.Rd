@@ -7,18 +7,20 @@
 gcd(a, b)
 }
 \arguments{
-\item{a, b}{Numeric scalars used as integers.}
+\item{a, b}{Nonnegative numeric scalars used as integers.}
 }
 \value{
-A nonnegative greatest common divisor.
+For the intended nonnegative inputs, their greatest common divisor.
 }
 \description{
-Euclid's recursive algorithm, with a nonnegative result. The arguments are
-intended to be integer-valued numeric scalars. By convention, \code{gcd(0, 0)} is
-zero. These algorithms are intended for small teaching examples, not
-arbitrary precision arithmetic.
+Euclid's recursive algorithm in the same direct form used in the lectures.
+The arguments are intended to be nonnegative integer-valued numeric scalars.
+The function does not normalize signs: outside the intended domain, the
+result follows R's remainder semantics and may be negative. By convention,
+\code{gcd(0, 0)} is zero. These algorithms are intended for small teaching
+examples, not arbitrary precision arithmetic.
 }
 \examples{
 gcd(206, 40)
-gcd(-12, 18)
+gcd(12, 18)
 }

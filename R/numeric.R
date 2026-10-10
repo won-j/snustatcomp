@@ -12,20 +12,20 @@ square <- function(x) { x * x }
 
 #' Greatest common divisor
 #'
-#' Euclid's recursive algorithm, with a nonnegative result. The arguments are
-#' intended to be integer-valued numeric scalars. By convention, `gcd(0, 0)` is
-#' zero. These algorithms are intended for small teaching examples, not
-#' arbitrary precision arithmetic.
-#' @param a,b Numeric scalars used as integers.
-#' @return A nonnegative greatest common divisor.
+#' Euclid's recursive algorithm in the same direct form used in the lectures.
+#' The arguments are intended to be nonnegative integer-valued numeric scalars.
+#' The function does not normalize signs: outside the intended domain, the
+#' result follows R's remainder semantics and may be negative. By convention,
+#' `gcd(0, 0)` is zero. These algorithms are intended for small teaching
+#' examples, not arbitrary precision arithmetic.
+#' @param a,b Nonnegative numeric scalars used as integers.
+#' @return For the intended nonnegative inputs, their greatest common divisor.
 #' @examples
 #' gcd(206, 40)
-#' gcd(-12, 18)
+#' gcd(12, 18)
 #' @export
 ## ---- numeric-gcd
 gcd <- function(a, b) {
-  a <- abs(a)
-  b <- abs(b)
   if (b == 0) {
     a
   } else {

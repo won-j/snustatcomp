@@ -1,6 +1,6 @@
 Package: snustatcomp
 Title: Explicit Data Structures for Statistical Computing Lessons
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: person(given = "Joong-Ho (Johann)", family = "Won", email = "wonj@stats.snu.ac.kr", role = c("aut", "cre"))
 Description: Small, explicit implementations of mutable pairs, linked lists,
     association tables, tagged data, generic operations, symbolic expressions,

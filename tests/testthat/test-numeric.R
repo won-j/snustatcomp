@@ -1,11 +1,9 @@
-test_that("gcd normalizes signs and handles zero", {
+test_that("gcd follows the lecture recurrence and handles zero", {
   expect_equal(gcd(206, 40), 2)
   expect_equal(gcd(54, 24), 6)
-  expect_equal(gcd(-54, 24), 6)
-  expect_equal(gcd(54, -24), 6)
-  expect_equal(gcd(-54, -24), 6)
-  expect_equal(gcd(0, -24), 24)
-  expect_equal(gcd(-24, 0), 24)
+  expect_equal(gcd(54, -24), -6)
+  expect_equal(gcd(0, 24), 24)
+  expect_equal(gcd(24, 0), 24)
   expect_equal(gcd(0, 0), 0)
   expect_equal(gcd(17, 13), 1)
 })

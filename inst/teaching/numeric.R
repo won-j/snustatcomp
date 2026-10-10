@@ -4,8 +4,6 @@ square <- function(x) { x * x }
 
 ## ---- numeric-gcd
 gcd <- function(a, b) {
-  a <- abs(a)
-  b <- abs(b)
   if (b == 0) {
     a
   } else {

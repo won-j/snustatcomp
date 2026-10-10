@@ -1,3 +1,9 @@
+# snustatcomp 0.1.2
+
+- Remove sign normalization from `gcd()` so its implementation and displayed
+  teaching code match the lecture's direct Euclidean recurrence. Negative
+  inputs now follow R's remainder semantics and may produce a negative result.
+
 # snustatcomp 0.1.1
 
 - Remove explicit input-validation branches from the numerical teaching
