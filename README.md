@@ -95,6 +95,24 @@ Commit generated files under `inst/teaching/` together with generated
 `NAMESPACE` and `man/` documentation. GitHub Actions checks both generated
 teaching-source consistency and the R package.
 
-## License
+## Sources and Licenses
 
-GPL-3
+The R implementations in this package were developed for the Seoul National
+University's 326.212: Statistical Computing lectures. They are translated from or based on programs presented in *[Structure and Interpretation of Computer Programs](https://mitpress.mit.edu/9780262510875/structure-and-interpretation-of-computer-programs/)*, Second Edition (1996), by Harold Abelson and Gerald Jay Sussman with Julie Sussman, and in [SICP JS](https://sourceacademy.org/sicpjs/), the JavaScript adaptation by Martin Henz and Tobias Wrigstad. The licensing approach follows the [Licenses section of
+`source-academy/sicp`](https://github.com/source-academy/sicp#licenses).
+
+The R package source code is made available under the [GNU General Public
+License version 3 (GPL-3)](https://www.gnu.org/licenses/gpl-3.0.html), as
+declared in `DESCRIPTION`. The generated teaching sources under
+`inst/teaching/` are derived from the canonical sources under `R/` and are
+distributed under the same license.
+
+The SICP and SICP JS texts and figures used as source material are licensed by
+their respective authors and adapters under the [Creative Commons
+Attribution-ShareAlike 4.0 International license (CC BY-SA
+4.0)](https://creativecommons.org/licenses/by-sa/4.0/). This package does not
+redistribute those texts or figures.
+
+External packages and third-party materials remain subject to the licenses
+specified by their respective copyright holders and distributors. A
+file-specific notice takes precedence where present.
